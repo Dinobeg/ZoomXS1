@@ -11,24 +11,20 @@
 
     <!-- Bootstrap CSS -->    
     {!! Html::style('css/bootstrap.min.css') !!}
-   
+    {!! Html::style('css/bootstrap-theme.css') !!}
 
-    <!-- bootstrap theme -->
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
     <!--external css-->
     <!-- font icon -->
     <link href="css/elegant-icons-style.css" rel="stylesheet" />
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />    
     <!-- full calendar css-->
     <link href="assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
-    <!-- easy pie chart-->
-    <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
     <!-- owl carousel -->
     <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
 
     <!-- Custom styles -->
-     {!! Html::style('css/style.css') !!}
-    <link href="css/style-responsive.css" rel="stylesheet" />
+    {!! Html::style('css/style.css') !!}
+    {!! Html::style('css/style-responsive.css') !!}
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
@@ -656,33 +652,30 @@
       </section>
       <!--main content end-->
   </section>
-  <!-- container section start -->
 
     <!-- javascripts -->
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    {!! Html::script('js/jquery.js') !!}
+    {!! Html::script('js/jquery-1.8.3.min.js') !!}
+    {!! Html::script('js/jquery-ui-1.9.2.custom.min.js') !!}
     <!-- bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
+    {!! Html::script('js/bootstrap.min.js') !!}
     <!-- nice scroll -->
-    <script src="js/jquery.scrollTo.min.js"></script>
-    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    {!! Html::script('js/jquery.scrollTo.min.js') !!}
+    {!! Html::script('js/jquery.nicescroll.js') !!}
     <!-- charts scripts -->
-    <script src="assets/jquery-knob/js/jquery.knob.js"></script>
-    <script src="js/jquery.sparkline.js" type="text/javascript"></script>
-    <script src="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
-    <script src="js/owl.carousel.js" ></script>
+    {!! Html::script('assets/jquery-knob/js/jquery.knob.js') !!}
+    {!! Html::script('js/owl.carousel.js') !!}
     <!-- jQuery full calendar -->
-    <script src="assets/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
+    {!! Html::script('assets/fullcalendar/fullcalendar/fullcalendar.min.js') !!}
     <!--script for this page only-->
-    <script src="js/calendar-custom.js"></script>
+    {!! Html::script('js/calendar-custom.js') !!}
     <!-- custom select -->
-    <script src="js/jquery.customSelect.min.js" ></script>
+    {!! Html::script('js/jquery.customSelect.min.js') !!}
     <!--custome script for all page-->
-    <script src="js/scripts.js"></script>
+    {!! Html::script('js/scripts.js') !!}
     <!-- custom script for this page-->
-    <script src="js/sparkline-chart.js"></script>
-    <script src="js/easy-pie-chart.js"></script>
+    {!! Html::script('js/sparkline-chart.js') !!}
+    {!! Html::script('js/easy-pie-chart.js') !!}
 
   <script>
 
