@@ -5,33 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ZoomXS Dashboard">
     <meta name="keyword" content="ZoomXS, Dashboard, Admin, Template, Maintenance, Bootstrap, Laravel, Responsive, Retina, Minimal">
-    <link rel="shortcut icon" href="img/favicon.png">
-
     <title>ZoomXS Dashboard</title>
 
     <!-- Bootstrap CSS -->    
     {!! Html::style('css/bootstrap.min.css') !!}
     {!! Html::style('css/bootstrap-theme.css') !!}
-
-    <!--external css-->
     <!-- font icon -->
-    <link href="css/elegant-icons-style.css" rel="stylesheet" />
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />    
+    {!! Html::style('css/elegant-icons-style.css') !!}
+    {!! Html::style('assets/font-awesome/css/font-awesome.css') !!}   
     <!-- full calendar css-->
-    <link href="assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+    {!! Html::style('assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css) !!}
     <!-- owl carousel -->
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-
+    {!! Html::style('css/owl.carousel.css') !!}
     <!-- Custom styles -->
     {!! Html::style('css/style.css') !!}
     {!! Html::style('css/style-responsive.css') !!}
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-      <script src="js/lte-ie7.js"></script>
+        {!! Html::script('js/html5shiv.js') !!}
+        {!! Html::script('js/respond.min.js') !!}
+        {!! Html::script('js/lte-ie7.js') !!}
     <![endif]-->
+    
   </head>
 
   <body>
