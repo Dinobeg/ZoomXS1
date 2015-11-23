@@ -11,10 +11,8 @@
 
     <!-- Bootstrap CSS -->    
     {!! Html::style('css/bootstrap.min.css') !!}
-{!! Html::style('css/style.css') !!}
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
+   
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap theme -->
     <link href="css/bootstrap-theme.css" rel="stylesheet">
     <!--external css-->
@@ -29,7 +27,7 @@
     <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
 
     <!-- Custom styles -->
-    <link href="css/style.css" rel="stylesheet">
+     {!! Html::style('css/style.css') !!}
     <link href="css/style-responsive.css" rel="stylesheet" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
