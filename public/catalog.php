@@ -29,7 +29,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
 
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="css/style_nedim.css">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 
 

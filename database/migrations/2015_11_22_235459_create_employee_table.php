@@ -14,7 +14,7 @@ class CreateEmployeeTable extends Migration
     {
         Schema::create('employee', function (Blueprint $table) {
             $table->increments('emp_id');
-            $table->foreign('r_id')->references('r_id')->on('role');
+            $table->integer('r_id')->unsigned();
             $table->string('emp_f_name')->nullable();
             $table->string('emp_l_name')->nullable();
             $table->string('emp_phone_num')->nullable();
@@ -22,6 +22,10 @@ class CreateEmployeeTable extends Migration
             $table->boolean('emp_is_active')->nullable();
             $table->boolean('emp_is_available')->nullable();
             $table->timestamps();
+        });
+
+        Schema::table('employee', function($table) {
+            $table->foreign('r_id')->references('r_id')->on('role');
         });
     }
 
