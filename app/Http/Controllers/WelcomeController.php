@@ -1,5 +1,6 @@
-<?php namespace App\Http\Controllers;
-
+<?php 
+namespace App\Http\Controllers;
+use DB;
 class WelcomeController extends Controller{
     
     public function __construct()
@@ -8,7 +9,10 @@ class WelcomeController extends Controller{
     }
     public function index()
     {
-        return view('Welcome');
+    	DB::table('role')->insert(
+    ['r_name' => 'test']
+);
+        return view('index');
     }
 }
 

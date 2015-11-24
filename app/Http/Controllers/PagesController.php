@@ -14,13 +14,13 @@ class PagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function contacts()
+    public function __construct()
     {
-        return view ('pages.contacts');
+        $this->middleware('guest');
     }
-    public function admin()
+    public function login()
     {
-        return view ('pages.sideAdmin');
+        return view ('pages.login');
     }
 
    

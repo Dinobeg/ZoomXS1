@@ -14,7 +14,7 @@
     {!! Html::style('css/elegant-icons-style.css') !!}
     {!! Html::style('assets/font-awesome/css/font-awesome.css') !!}   
     <!-- full calendar css-->
-    {!! Html::style('assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css) !!}
+    {!! Html::style('assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css') !!}
     <!-- owl carousel -->
     {!! Html::style('css/owl.carousel.css') !!}
     <!-- Custom styles -->
@@ -31,6 +31,7 @@
   </head>
 
   <body>
+{!! HTML::link('/login', 'log in')!!}
   <!-- container section start -->
   <section id="container" class="">
       <!--header start-->
