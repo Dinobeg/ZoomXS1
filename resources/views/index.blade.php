@@ -3,12 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Karmanta - Bootstrap 3 Responsive Admin Template">
-    <meta name="author" content="GeeksLabs">
-    <meta name="keyword" content="Karmanta, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-    <link rel="shortcut icon" href="img/favicon.png">
-
-    <title>ZoomXS</title>
+    <meta name="description" content="ZoomXS Dashboard">
+    <meta name="keyword" content="ZoomXS, Dashboard, Admin, Template, Maintenance, Bootstrap, Laravel, Responsive, Retina, Minimal">
+    <title>ZoomXS Dashboard</title>
 
     <!-- Bootstrap CSS -->    
     {!! Html::style('css/bootstrap.min.css') !!}
@@ -49,8 +46,9 @@
             <!--logo end-->
 
 
-            <button id="loginbutton" type="button" class="btn btn-primary"><a>{!! HTML::link('/login', 'log in')!!}</a></button>
-           {!! HTML::link('/login', 'log in')!!}
+            <button id="loginbutton" type="button" class="btn btn-primary">Log in</button>
+            {!! HTML::link('/login', 'log in')!!}
+           
       </header>      
       <!--header end-->
 

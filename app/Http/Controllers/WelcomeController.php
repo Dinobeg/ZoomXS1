@@ -9,9 +9,6 @@ class WelcomeController extends Controller{
     }
     public function index()
     {
-    	DB::table('role')->insert(
-    ['r_name' => 'test']
-);
         return view('index');
     }
 }
