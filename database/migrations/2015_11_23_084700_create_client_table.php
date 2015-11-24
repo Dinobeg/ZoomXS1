@@ -12,22 +12,22 @@ class CreateClientTable extends Migration
      */
     public function up()
     {
-        Schema::create('client', function (Blueprint $table) {
-            $table->increments('cl_id');
-            $table->integer('r_id')->unsigned();
-            $table->integer('comp_id')->unsigned();
-            $table->string('cl_f_name')->nullable();
-            $table->string('cl_l_name')->nullable();
-            $table->string('cl_address')->nullable();
-            $table->string('cl_phone_num')->nullable();
-            $table->string('cl_email')->nullable();
-            $table->string('cl_position')->nullable();
+        Schema::create('clients', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user')->unsigned();
+            $table->integer('company')->unsigned();
+            $table->string('f_name')->nullable();
+            $table->string('l_name')->nullable();
+            $table->string('address')->nullable();
+            $table->string('phone_num')->nullable();
+            $table->string('email')->nullable();
+            $table->string('position')->nullable();
             $table->timestamps();
         });
 
-        Schema::table('client', function($table) {
-            $table->foreign('comp_id')->references('comp_id')->on('company');
-            $table->foreign('r_id')->references('r_id')->on('role');
+        Schema::table('clients', function($table) {
+            $table->foreign('company')->references('id')->on('companies');
+            $table->foreign('user')->references('id')->on('users');
         });
     }
 
@@ -38,6 +38,6 @@ class CreateClientTable extends Migration
      */
     public function down()
     {
-        Schema::drop('client');
+        Schema::drop('clients');
     }
 }

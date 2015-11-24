@@ -45,9 +45,9 @@
             <a href="index.html" class="logo"><span>Zoom</span> <span class="lite">XS</span></a>
             <!--logo end-->
 
-
-            <button id="loginbutton" type="button" class="btn btn-primary">Log in</button>
-            {!! HTML::link('/login', 'log in')!!}
+<form action="/auth/login">
+            <button id="loginbutton" type="submit" class="btn btn-primary">Login</button>
+</form>            
            
       </header>      
       <!--header end-->

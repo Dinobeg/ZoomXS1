@@ -12,18 +12,18 @@ class CreateContractTable extends Migration
      */
     public function up()
     {
-        Schema::create('contract', function (Blueprint $table) {
-            $table->increments('con_id');
-            $table->integer('emp_id')->unsigned();
-            $table->integer('ps_id')->unsigned();
-            $table->string('con_role');
-            $table->string('con_description');
+        Schema::create('contracts', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('employee')->unsigned();
+            $table->integer('personal_solution')->unsigned();
+            $table->string('role');
+            $table->string('description');
             $table->timestamps();
         });
 
-        Schema::table('contract', function($table) {
-            $table->foreign('emp_id')->references('emp_id')->on('employee');
-            $table->foreign('ps_id')->references('ps_id')->on('personal_solution');
+        Schema::table('contracts', function($table) {
+            $table->foreign('employee')->references('id')->on('employees');
+            $table->foreign('personal_solution')->references('id')->on('personal_solutions');
         });
     }
 
@@ -34,6 +34,6 @@ class CreateContractTable extends Migration
      */
     public function down()
     {
-        Schema::drop('contract');
+        Schema::drop('contracts');
     }
 }
