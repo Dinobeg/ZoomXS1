@@ -14,10 +14,10 @@ class CreateRoleTable extends Migration
     {
         Schema::create('role', function (Blueprint $table) {
             $table->increments('r_id');
-            $table->string('r_name');
-            $table->string('r_decsription');
-            $table->string('r_username');
-            $table->string('r_password');
+            $table->string('r_name')->nullable();
+            $table->string('r_decsription')->nullable();
+            $table->string('r_username')->nullable();
+            $table->string('r_password')->nullable();
             $table->timestamps();
         });
     }

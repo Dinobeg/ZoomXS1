@@ -12,8 +12,7 @@
 */
 
 Route::get('/', 'WelcomeController@index');
-Route::get('/contacts', 'PagesController@contacts');
-Route::get('/admin', 'PagesController@admin');
+Route::get('login', 'PagesController@login');
 
 
 
