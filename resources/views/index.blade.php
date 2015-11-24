@@ -32,10 +32,11 @@
   </head>
 
   <body>
+   
   <!-- container section start -->
   <section id="container" class="">
       <!--header start-->
-      
+       
       <header class="header white-bg">
             <div class="toggle-nav">
                 <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
@@ -159,7 +160,7 @@
           </section>
       </section>
       <!--main content end-->
-
+@yield('sideAdmin')
   <!-- container section start -->
 
     <!-- javascripts -->
