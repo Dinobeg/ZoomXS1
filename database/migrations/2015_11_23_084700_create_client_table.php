@@ -14,8 +14,8 @@ class CreateClientTable extends Migration
     {
         Schema::create('client', function (Blueprint $table) {
             $table->increments('cl_id');
-            $table->foreign('comp_id')->references('comp_id')->on('company');
-            $table->foreign('r_id')->references('r_id')->on('role');
+            $table->integer('r_id')->unsigned();
+            $table->integer('comp_id')->unsigned();
             $table->string('cl_f_name')->nullable();
             $table->string('cl_l_name')->nullable();
             $table->string('cl_address')->nullable();
@@ -23,6 +23,11 @@ class CreateClientTable extends Migration
             $table->string('cl_email')->nullable();
             $table->string('cl_position')->nullable();
             $table->timestamps();
+        });
+
+        Schema::table('client', function($table) {
+            $table->foreign('comp_id')->references('comp_id')->on('company');
+            $table->foreign('r_id')->references('r_id')->on('role');
         });
     }
 

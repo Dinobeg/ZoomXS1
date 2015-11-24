@@ -31,7 +31,7 @@
   </head>
 
   <body>
-{!! HTML::link('/login', 'log in')!!}
+        {!! HTML::link('/login', 'log in')!!}
   <!-- container section start -->
   <section id="container" class="">
       <!--header start-->
