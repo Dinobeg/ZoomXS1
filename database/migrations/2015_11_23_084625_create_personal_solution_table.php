@@ -12,20 +12,20 @@ class CreatePersonalSolutionTable extends Migration
      */
     public function up()
     {
-        Schema::create('personal_solution', function (Blueprint $table) {
-            $table->increments('ps_id');
-            $table->integer('sol_id')->unsigned();
-            $table->integer('comp_id')->unsigned();
-            $table->string('ps_name');
-            $table->string('ps_description');
-            $table->date('ps_maintenance_from');
-            $table->date('ps_maintenance_to');
+        Schema::create('personal_solutions', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('solution')->unsigned();
+            $table->integer('company')->unsigned();
+            $table->string('name');
+            $table->string('description');
+            $table->date('maintenance_from');
+            $table->date('maintenance_to');
             $table->timestamps();
         });
 
-        Schema::table('personal_solution', function($table) {
-            $table->foreign('sol_id')->references('sol_id')->on('solution');
-            $table->foreign('comp_id')->references('comp_id')->on('company');
+        Schema::table('personal_solutions', function($table) {
+            $table->foreign('solution')->references('id')->on('solutions');
+            $table->foreign('company')->references('id')->on('companies');
         });
     }
 
@@ -36,6 +36,6 @@ class CreatePersonalSolutionTable extends Migration
      */
     public function down()
     {
-        Schema::drop('personal_solution');
+        Schema::drop('personal_solutions');
     }
 }

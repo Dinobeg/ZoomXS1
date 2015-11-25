@@ -12,10 +12,10 @@ class CreateSolutionTable extends Migration
      */
     public function up()
     {
-        Schema::create('solution', function (Blueprint $table) {
-            $table->increments('sol_id');
-            $table->string('sol_name');
-            $table->string('sol_type');
+        Schema::create('solutions', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('type');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateSolutionTable extends Migration
      */
     public function down()
     {
-        Schema::drop('solution');
+        Schema::drop('solutions');
     }
 }

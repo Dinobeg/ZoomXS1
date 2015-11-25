@@ -12,9 +12,9 @@ class CreateTaskCategoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('task_category', function (Blueprint $table) {
-            $table->increments('tc_id');
-            $table->string('tc_name');
+        Schema::create('task_categories', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ class CreateTaskCategoryTable extends Migration
      */
     public function down()
     {
-        Schema::drop('task_category');
+        Schema::drop('task_categories');
     }
 }

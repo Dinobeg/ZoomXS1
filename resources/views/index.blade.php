@@ -46,11 +46,10 @@
             <!--logo end-->
 
 
-            
-            <form action="/login">
+            <button id="loginbutton" type="submit" class="btn btn-primary" href="">{!! HTML::link('/login', 'log in')!!}</button>
+           
 
-              <button id="loginbutton" type="submit" class="btn btn-primary" href="">Login</button>
-            </form>
+            
 
             
             
