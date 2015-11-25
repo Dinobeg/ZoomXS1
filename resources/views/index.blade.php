@@ -46,8 +46,15 @@
             <!--logo end-->
 
 
-            <button id="loginbutton" type="button" class="btn btn-primary">Log in</button>
-            {!! HTML::link('/login', 'log in')!!}
+            
+            <form action="/login">
+
+              <button id="loginbutton" type="submit" class="btn btn-primary" href="">Login</button>
+            </form>
+
+            
+            
+            
            
       </header>      
       <!--header end-->
