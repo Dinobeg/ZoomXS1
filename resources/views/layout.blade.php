@@ -50,6 +50,8 @@
     
  @yield('sadmin')
  @yield('sclient')
+ @yield('semployee')
+ @yield('smanager')
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">            

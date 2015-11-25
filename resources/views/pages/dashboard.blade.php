@@ -79,65 +79,207 @@
 @endif
 @if( Auth::user()->name == 'client')
   @section('sclient')
-  <!--sidebar start-->
-<aside>
-    <div id="sidebar"  class="nav-collapse ">
-        <!-- sidebar menu start-->
-        <ul class="sidebar-menu">                
-            <li class="active">
-                <a class="" href="index.html">
-                    <i class="icon_house_alt"></i>
-                    <span>Dashboard</span><br/>
-                    <span>Solution Name</span>
-                </a>
-            </li>
-            <li class="sub-menu">
-                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="icon_document_alt"></i>
-                    <span>Questions</span>
-                    <span class="menu-arrow arrow_carrot-right"></span>
-                </a>
-                <ul class="sub">
-                    <li><a class="" href="browse_solutions.html">Browse Questions</a></li>                          
-                    <li><a class="" href="insert_solution.html"><b>Ask a new question</b></a></li>
-                </ul>
-            </li>
-            <li class="sub-menu">
-                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="icon_document_alt"></i>
-                    <span>Answers</span>
-                    <span class="menu-arrow arrow_carrot-right"></span>
-                </a>
-                <ul class="sub">
-                    <li><a class="" href="browse_clients.html">Browse Answers</a></li>                                               
-                </ul>
-            </li>
-            <li class="sub-menu">
-                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="icon_document_alt"></i>
-                    <span>Problems</span>
-                    <span class="menu-arrow arrow_carrot-right"></span>
-                </a>
-                <ul class="sub">
-                    <li><a class="" href="browse_staff.html">Browse Problems</a></li>                          
-                    <li><a class="" href="insert_staff.html"><b>Set a new problem</b></a></li>
-                    <!-- update staff, modify contract -->
-                </ul>
-            </li>
-            <li class="sub-menu">
-                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="icon_document_alt"></i>
-                    <span>Solutions</span>
-                    <span class="menu-arrow arrow_carrot-right"></span>
-                </a>
-                <ul class="sub">
-                    <li><a class="" href="browse_teams.html">Browse Solutions</a></li>                          
-                </ul>
-            </li>
-        </ul>
-        <!-- sidebar menu end-->
-    </div>
-</aside>
-<!--sidebar end-->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar"  class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu">                
+                <li class="active">
+                    <a class="" href="index.html">
+                        <i class="icon_house_alt"></i>
+                        <span>Dashboard</span><br/>
+                        <span>Solution Name</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="icon_document_alt"></i>
+                        <span>Questions</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="browse_solutions.html">Browse Questions</a></li>                          
+                        <li><a class="" href="insert_solution.html"><b>Ask a new question</b></a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="icon_document_alt"></i>
+                        <span>Answers</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="browse_clients.html">Browse Answers</a></li>                                               
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="icon_document_alt"></i>
+                        <span>Problems</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="browse_staff.html">Browse Problems</a></li>                          
+                        <li><a class="" href="insert_staff.html"><b>Set a new problem</b></a></li>
+                        <!-- update staff, modify contract -->
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="icon_document_alt"></i>
+                        <span>Solutions</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="browse_teams.html">Browse Solutions</a></li>                          
+                    </ul>
+                </li>
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+  @stop
+@endif
+@if( Auth::user()->name == 'employee')
+  @section('semployee')
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar"  class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu">                
+                <li class="active">
+                    <a class="" href="index.html">
+                        <i class="icon_house_alt"></i>
+                        <span>Dashboard</span><br/>
+                        <span>Solution Name</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="icon_document_alt"></i>
+                        <span>Questions</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="browse_solutions.html">Browse Questions</a></li>                          
+                        <li><a class="" href="insert_solution.html"><b>Ask a new question</b></a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="icon_document_alt"></i>
+                        <span>Answers</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="browse_clients.html">Browse Answers</a></li>                                               
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="icon_document_alt"></i>
+                        <span>Problems</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="browse_staff.html">Browse Problems</a></li>                          
+                        <li><a class="" href="insert_staff.html"><b>Set a new problem</b></a></li>
+                        <!-- update staff, modify contract -->
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="icon_document_alt"></i>
+                        <span>Solutions</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="browse_teams.html">Browse Solutions</a></li>                          
+                    </ul>
+                </li>
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+  @stop
+@endif
+@if( Auth::user()->name == 'manager') 
+<!-- treba provjerit i da mu je u contract rola manager i onda stavit sve if else 
+UGLAVNOM NIJE OVO DOBRO !!-->
+  @section('smanager')
+    <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">                
+                  <li class="active">
+                      <a class="" href="index.html">
+                          <i class="icon_house_alt"></i>
+                          <span>Dashboard</span><br/>
+                          <span>Solution Name</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                          <i class="icon_document_alt"></i>
+                          <span>Questions</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="browse_solutions.html">Browse Questions</a></li>                          
+                          <li><a class="" href="insert_solution.html"><b>Answer a question</b></a></li>
+                          <li><a class="" href="insert_solution.html"><b>Pending questions</b></a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                          <i class="icon_document_alt"></i>
+                          <span>Answers</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="browse_clients.html">Browse Answers</a></li>                                               
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                          <i class="icon_document_alt"></i>
+                          <span>Problems</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="browse_staff.html">Browse Problems</a></li>                          
+                          <li><a class="" href="insert_staff.html"><b>Solve a problem</b></a></li>
+                          <!-- update staff, modify contract -->
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                          <i class="icon_document_alt"></i>
+                          <span>Solutions</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="browse_teams.html">Browse Solutions</a></li>                          
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                          <i class="icon_document_alt"></i>
+                          <span>Other</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="browse_teams.html">Allocate Staff</a></li>
+                          <li><a class="" href="browse_teams.html">Manage Team</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+    <!--sidebar end-->
   @stop
 @endif
