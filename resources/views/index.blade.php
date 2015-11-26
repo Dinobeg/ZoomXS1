@@ -18,8 +18,9 @@
     <!-- owl carousel -->
     {!! Html::style('css/owl.carousel.css') !!}
     <!-- Custom styles -->
-    {!! Html::style('css/style_nedim.css') !!}
     {!! Html::style('css/style.css') !!}
+    {!! Html::style('css/style_nedim.css') !!}
+    
     {!! Html::style('css/style-responsive.css') !!}
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
@@ -58,75 +59,14 @@
       </header>      
       <!--header end-->
 
-      <!--sidebar start-->
-      <aside>
-          <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu">                
-                  <li class="active">
-                      <a class="" href="#">
-                          <i class="icon_house_alt"></i>
-                          <span>Packages</span>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#" class="">
-                          <i class="icon_desktop"></i>
-                          <span>Free products</span>
-                          
-                      </a>
-                  </li>
-                  <li>
-                      <a class="" href="#">
-                          <i class="icon_desktop"></i>
-                          <span>Standard products</span>
-                          
-                      </a>
-                  </li>
-              </ul>
-              <!-- sidebar menu end-->
-          </div>
-      </aside>
-      <!--sidebar end-->
-
+    
 
       
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">    
 
-  <!-- free packages -->
- <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------- -->
- <div id="free">
-  <div id="ThreeHolder">
-    <div id="SlopeONE">
-      <h2>5 questions offer</h2>
-      <p><a href="#"><img src="images/server.gif" alt="Email Hosting" width="173" height="149" border="0" /></a></p>
-      <a href="#">Free</a>
-      <p>Package offering 5 questions<br />
-        <strong>Limited company staff available</strong> good for small businesses and systems <br />
-        </p>
-    </div>
-    <div id="SlopeTWO">
-      <h2>1 month free trial</h2>
-      <p><a href="#"><img src="images/server2.gif" alt="Basic Hosting" width="173" height="149" border="0" /></a></p>
-      <a href="#">A trial that lasts one month</a>
-      <p>Good for solving begginer questions <br />
-        In-package purchases included <br />
-        <p>Package offering 10 questions for a month<br />
-        <strong>Staff available during working hours</strong> <br />
-        </p>
-    </div>
-    <div id="SlopeTHREE">
-      <h2>1 month free with subscription afterwards</h2>
-      <p><a href="#"><img src="images/server3.gif" alt="Ecommerce Hosting" width="173" height="149" border="0" /></a></p>
-      <a href="#">Good for mid-size to bigger companies</a>
-      <p>Package offering 30 questions monthly<br />
-        <strong>Staff available until 20:00 PM every day</strong> free for a month and later 200KM per month <br />
-        </p>
-    </div>
-  </div>
-</div>
+
 
     <!-- standard packages -->
  <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -135,23 +75,23 @@
   <div id="standard">
   <div id="ThreeHolder">
     <div id="SlopeONE">
-      <h2>15 questions per month</h2>
+      <h2>Basic</h2>
       <p><a href="#"><img src="images/server.gif" alt="Email Hosting" width="173" height="149" border="0" /></a></p>
-      <a href="#">Standard</a>
+      <a href="#">Monthly subscription</a>
       <p>Package offering 15 questions monthly<br />
         <strong>Staff available during working hours</strong> 100KM per month <br />
         </p>
     </div>
     <div id="SlopeTWO">
-      <h2>30 questions per month</h2>
+      <h2>Standard</h2>
       <p><a href="#"><img src="images/server2.gif" alt="Basic Hosting" width="173" height="149" border="0" /></a></p>
-      <a href="#">Standard for big systems</a>
+      <a href="#">Monthly subscription</a>
       <p>Package offering 30 questions monthly<br />
         <strong>Staff available until 20:00 PM every day</strong> 190KM per month <br />
         </p>
     </div>
     <div id="SlopeTHREE">
-      <h2>Unlimited questions</h2>
+      <h2>Premium</h2>
       <p><a href="#"><img src="images/server3.gif" alt="Ecommerce Hosting" width="173" height="149" border="0" /></a></p>
       <a href="#">Premium</a>
       <p>Package offering unlimited questions monthly<br />
