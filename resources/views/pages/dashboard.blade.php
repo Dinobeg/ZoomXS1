@@ -66,8 +66,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="task_categories.html">Task Categories</a></li>                          
-                          <li><a class="" href="roles.html">Roles</a></li>
+                          <li><a class="" href="task_categories.html">Task Categories</a></li>                     
+                          <li><a class="" href="http://localhost:8000/auth/register">Roles</a></li>
                           <li><a class="" href="companies.html">Companies</a></li>
                           <li><a class="" href="contracts.html">Contracts</a></li>
                       </ul>

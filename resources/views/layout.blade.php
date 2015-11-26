@@ -43,7 +43,9 @@
             <!--logo start-->
             <a href="#" class="logo">Zoom<span>XS</span> <span class="lite">Dashboard</span></a>
             <!--logo end-->
-
+            <form action="/../auth/logout">
+  <button id="loginbutton" type="submit" class="btn btn-primary" >Logout</button>
+</form>
       </header>      
       <!--header end-->
       

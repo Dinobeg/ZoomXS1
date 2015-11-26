@@ -22,6 +22,10 @@ class PagesController extends Controller
     {
         return view ('auth.login');
     }
+    public function logout()
+    {
+        return view ('auth.logout');
+    }
     public function dashboard()
     {
         return view ('pages.dashboard'); 
