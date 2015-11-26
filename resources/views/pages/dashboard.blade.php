@@ -1,4 +1,6 @@
 @extends('layout')
+
+<!-- SIDEBAR ADMIN -->
 @if( Auth::user()->name == 'admin')
   @section('sadmin')
 <!--sidebar start-->
@@ -77,6 +79,7 @@
       <!--sidebar end-->
   @stop
 @endif
+<!-- SIDEBAR CLIENT -->
 @if( Auth::user()->name == 'client')
   @section('sclient')
     <!--sidebar start-->
@@ -141,6 +144,7 @@
     <!--sidebar end-->
   @stop
 @endif
+<!-- SIDEBAR EMPLOYEE -->
 @if( Auth::user()->name == 'employee')
   @section('semployee')
     <!--sidebar start-->
@@ -205,6 +209,7 @@
     <!--sidebar end-->
   @stop
 @endif
+<!-- SIDEBAR MANAGER -->
 @if( Auth::user()->name == 'manager') 
 <!-- treba provjerit i da mu je u contract rola manager i onda stavit sve if else 
 UGLAVNOM NIJE OVO DOBRO !!-->
