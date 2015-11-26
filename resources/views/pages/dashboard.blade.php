@@ -67,8 +67,57 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="task_categories.html">Task Categories</a></li>                     
-                          <li><a class="" href="http://localhost:8000/auth/register">Roles</a></li>
                           <li><a class="" href="companies.html">Companies</a></li>
+                          <!--PRIMJER !!!!!!!!!!!!!!!!!!-->
+                          <li><a type="button" class="" data-toggle="modal" data-target="#role">Roles</a></li>
+                            <!-- Modal -->
+                            <div id="role" class="modal fade" role="dialog">
+                              <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Insert new user</h4>
+                                  </div>
+                                  <div class="modal-body">             
+                                    <form class="form-horizontal" method="POST" action="/auth/register">
+                                    {!! csrf_field() !!}
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label">Role</label>
+                                          <div class="col-sm-10">
+                                              <input type="text" name="name" value="{{ old('name') }}">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label">Email</label>
+                                          <div class="col-sm-10">
+                                              <input type="email" name="email" value="{{ old('email') }}">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label">Password</label>
+                                          <div class="col-sm-10">
+                                              <input type="password" name="password">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label">Confirm Password</label>
+                                          <div class="col-sm-10">
+                                              <input type="password" name="password_confirmation">
+                                          </div>
+                                      </div>
+                                      <div>
+                                          <button type="submit">Register</button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--PRIMJER KRAJ !!!!!!!!!!!!!!!!!!-->
                           <li><a class="" href="contracts.html">Contracts</a></li>
                       </ul>
                   </li>

@@ -21,14 +21,7 @@ Route::get('home', function(){
 		return view('pages.dashboard');
 	}
 });
-Route::get('employee', function() {
-	$employee = App\Employee::find(1);
-	print_r($employee);
-});
-Route::get('task_priority', function() {
-	$x = App\TaskPriority::find(1);
-	echo 'Hello this is task priority ' . $x->name;
-});
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
