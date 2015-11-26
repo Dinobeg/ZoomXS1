@@ -57,8 +57,6 @@
       </header>      
       <!--header end-->
 
-    
-
       
       <!--main content start-->
       <section id="main-content">
