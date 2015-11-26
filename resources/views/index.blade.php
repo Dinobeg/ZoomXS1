@@ -76,7 +76,7 @@
   <div id="ThreeHolder">
     <div id="SlopeONE">
       <h2>Basic</h2>
-      <p><a href="#"><img src="images/server.gif" alt="Email Hosting" width="173" height="149" border="0" /></a></p>
+      <p><a href="#"><img src="images/shopping.png" alt="Email Hosting" width="173" height="149" border="0" /></a></p>
       <a href="#">Monthly subscription</a>
       <p>Package offering 15 questions monthly<br />
         <strong>Staff available during working hours</strong> 100KM per month <br />
@@ -84,7 +84,7 @@
     </div>
     <div id="SlopeTWO">
       <h2>Standard</h2>
-      <p><a href="#"><img src="images/server2.gif" alt="Basic Hosting" width="173" height="149" border="0" /></a></p>
+      <p><a href="#"><img src="images/shopping.png" alt="Basic Hosting" width="173" height="149" border="0" /></a></p>
       <a href="#">Monthly subscription</a>
       <p>Package offering 30 questions monthly<br />
         <strong>Staff available until 20:00 PM every day</strong> 190KM per month <br />
@@ -92,7 +92,7 @@
     </div>
     <div id="SlopeTHREE">
       <h2>Premium</h2>
-      <p><a href="#"><img src="images/server3.gif" alt="Ecommerce Hosting" width="173" height="149" border="0" /></a></p>
+      <p><a href="#"><img src="images/shopping.png" alt="Ecommerce Hosting" width="173" height="149" border="0" /></a></p>
       <a href="#">Premium</a>
       <p>Package offering unlimited questions monthly<br />
         <strong>Staff available 24/7</strong> 300KM per month <br />
