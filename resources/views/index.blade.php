@@ -18,8 +18,9 @@
     <!-- owl carousel -->
     {!! Html::style('css/owl.carousel.css') !!}
     <!-- Custom styles -->
-    {!! Html::style('css/style.css') !!}
+    
     {!! Html::style('css/style_nedim.css') !!}
+    {!! Html::style('css/style.css') !!}
     
     {!! Html::style('css/style-responsive.css') !!}
 
@@ -37,6 +38,7 @@
   <section id="container" class="">
       <!--header start-->
       
+
       <header class="header white-bg">
             <div class="toggle-nav">
                 <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
@@ -46,15 +48,11 @@
             <a href="index.html" class="logo"><span>Zoom</span> <span class="lite">XS</span></a>
             <!--logo end-->
 
-
-            <button id="loginbutton" type="submit" class="btn btn-primary" href="">{!! HTML::link('/login', 'log in')!!}</button>
-           
-
+<form action="/login">
+  <button id="loginbutton" type="submit" class="btn btn-primary" >Login</button>
+</form>
             
-
-            
-            
-            
+                   
            
       </header>      
       <!--header end-->
