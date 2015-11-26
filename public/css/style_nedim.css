@@ -31,7 +31,7 @@
 	font-size: 16px;
 	font-weight: bold;
 	color: #E9A403;
-	background-image: url(images/menu-bg.gif);
+	
 	background-repeat: repeat-x;
 	border: 1px solid #CCCCCC;
 	background-position: left bottom;
@@ -84,9 +84,10 @@
 }
 #SlopeONE, #SlopeTWO, #SlopeTHREE {
 	border: 1px solid #CCCCCC;
-	background-image: url(images/slope-bg.gif);
+	
 	background-repeat: repeat-x;
 	background-position: center bottom;
+	background-color: white;
 }
 
 
@@ -109,4 +110,15 @@
 	text-decoration: none;
 	list-style-type: none;
 	color: black;
+}
+
+img 
+{
+	padding: 2%;
+	margin-left: 14%;
+}
+
+#desc_link
+{
+	margin-left: 24%;
 }
