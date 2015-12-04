@@ -1,3 +1,7 @@
+<?php
+
+use App\Client;
+?>
 @extends('layout')
 
 <!-- SIDEBAR ADMIN -->
@@ -336,4 +340,112 @@ UGLAVNOM NIJE OVO DOBRO !!-->
       </aside>
     <!--sidebar end-->
   @stop
+@endif
+@if( Auth::user()->name == 'admin')
+@section('oadmin')
+<!--overview start-->
+<div class="row state-overview">
+  <div class="col-lg-4">
+  <!--user profile info start-->
+  <section class="panel">
+    <div class="profile-widget profile-widget-info">
+      <div class="panel-body">
+        <div class="col-lg-4 col-sm-4 profile-widget-name">
+          <h4>ssssss</h4>               
+          <div class="follow-ava">
+              <img src="img/Empty_Profile.jpg" alt="">
+          </div>
+          <h6>{{Auth::user()->name}}</h6>
+        </div>
+        <div class="col-lg-8 col-sm-8 follow-info">
+            <p>Dssssss</p>
+            <p>{{Auth::user()->email}}</p>
+            <h6>
+                <span><i class="icon_clock_alt"></i>{{Carbon\Carbon::now('Europe/Sarajevo')->format('H:i')}}</span>
+                <span><i class="icon_calendar"></i>{{Carbon\Carbon::now('Europe/Sarajevo')->format('d/m/Y')}}</span>
+                <span><i class="icon_pin_alt"></i><!--dodati geolocation -->NY</span>
+            </h6>
+        </div>
+        <div class="weather-category twt-category">
+          <ul>
+            <!-- example -->
+              <li class="active">
+                  <h4>50</h4>
+                  <i class="icon_close_alt2"></i> Pending Task
+              </li>
+          </ul>
+        </div>
+      </div>
+      <footer class="profile-widget-foot">
+        <div class="follow-task">
+          <span>
+             <!-- example -->
+          <a href="">
+            <i class="icon_mail_alt tooltips" data-original-title="My Mail"></i>
+            <span class="badge bg-important">4</span>
+          </a>
+          </span>
+        </div>
+      </footer>
+    </div>
+  </section>
+  <!--user profile info end-->
+  </div>
+</div>
+<!--overview end-->
+@stop
+@endif
+@if( Auth::user()->name == 'client')
+@section ('oclient')
+<!--overview start-->
+<div class="row state-overview">
+  <div class="col-lg-4">
+  <!--user profile info start-->
+  <section class="panel">
+    <div class="profile-widget profile-widget-info">
+      <div class="panel-body">
+        <div class="col-lg-4 col-sm-4 profile-widget-name">
+          <h4>ssssss</h4>               
+          <div class="follow-ava">
+              <img src="img/Empty_Profile.jpg" alt="">
+          </div>
+          <h6>{!!Client::where('Auth::user()->id', '=', 'Client::client()->role')->name();!!}</h6>
+        </div>
+        <div class="col-lg-8 col-sm-8 follow-info">
+            <p>Dssssss</p>
+            <p>{{Auth::user()->email}}</p>
+            <h6>
+                <span><i class="icon_clock_alt"></i>{{Carbon\Carbon::now('Europe/Sarajevo')->format('H:i')}}</span>
+                <span><i class="icon_calendar"></i>{{Carbon\Carbon::now('Europe/Sarajevo')->format('d/m/Y')}}</span>
+                <span><i class="icon_pin_alt"></i><!--dodati geolocation -->NY</span>
+            </h6>
+        </div>
+        <div class="weather-category twt-category">
+          <ul>
+            <!-- example -->
+              <li class="active">
+                  <h4>50</h4>
+                  <i class="icon_close_alt2"></i> Pending Task
+              </li>
+          </ul>
+        </div>
+      </div>
+      <footer class="profile-widget-foot">
+        <div class="follow-task">
+          <span>
+             <!-- example -->
+          <a href="">
+            <i class="icon_mail_alt tooltips" data-original-title="My Mail"></i>
+            <span class="badge bg-important">4</span>
+          </a>
+          </span>
+        </div>
+      </footer>
+    </div>
+  </section>
+  <!--user profile info end-->
+  </div>
+</div>
+<!--overview end-->
+@stop
 @endif
