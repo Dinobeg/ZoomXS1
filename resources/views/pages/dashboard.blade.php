@@ -131,9 +131,11 @@
                                           <div class="btn-group">
                                             
                                                 
-                                              <!-- Modal INSERT-->
+                                              <!-- Modal UPDATE-->
                                               <div class="text-right"> 
-                                                <button type="button" data-toggle="modal" data-target="#tcu" class="btn btn-primary"><i class="icon_plus_alt2"></i></a>
+                                                {!! Form::open(['method' => 'POST','route' => ['route.edit', $c->id] ], ['class' => 'form-horizontal']) !!} 
+                                                <button type="submit" data-toggle="modal" data-target="#tcu" class="btn btn-primary"><i class="icon_plus_alt2"></i></a>
+                                                  {!! Form::close() !!}
                                                 </div>
                                                 <div id="tcu" class="modal fade" role="dialog">
                                                   <div class="modal-dialog">
@@ -142,19 +144,24 @@
                                                       <div class="modal-header">
                                                         <h4 class="modal-title">Update user</h4>
                                                       </div>
-                                                      <div class="modal-body">             
-                                                        {!! Form::open(['method' => 'PATCH','route' => ['route.update', $c->id] ], ['class' => 'form-horizontal']) !!}
-                                                        {!! csrf_field() !!}
+                                                      <div class="modal-body">   
+                                                           
+                                                           @if (isset ($t))     
+                                                      
+                                                        {!!  Form::open(['method' => 'PATCH','route' => ['route.update', $t->id] ], ['class' => 'form-horizontal']) !!}
+                                                      
                                                           <div class="form-group">
                                                             <label class="col-sm-2 control-label">Name</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" name="name" value="{{ old('name') }}">
+                                                                <input type="text" name="name" value="{{ $t->name }}">
                                                             </div>
+                                                           
                                                           </div>
                                                           <div>
                                                               <button type="submit">Update</button>
                                                           </div>
                                                        {!! Form::close() !!}
+                                                       @endif
                                                       </div>
                                                       <div class="modal-footer">
                                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -162,13 +169,9 @@
                                                     </div>
                                                   </div>
                                                 </div>  
-                                                <!-- END MODAL INSERT -->
-
-
-
-                                                
-                                             
-                                            {!! Form::open(['method' => 'DELETE','route' => ['route.destroy', $c->id] ]) !!}
+                                                <!-- END MODAL UPDATE -->
+                                              <!-- DELETE FUNCTION -->
+                                              {!! Form::open(['method' => 'DELETE','route' => ['route.destroy', $c->id] ]) !!}
                                                 <button type="submit" class="btn btn-danger"><i class="icon_close_alt2"></i></a>
                                               {!! Form::close() !!}
                                           </div>
@@ -323,9 +326,137 @@
                         <span>Questions</span>
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
-                    <ul class="sub">
-                        <li><a class="" href="browse_solutions.html">Browse Questions</a></li>                          
-                        <li><a class="" href="insert_solution.html"><b>Ask a new question</b></a></li>
+                    <ul class="sub">                  
+                        <!-- ASK QUESTION -->
+                          <li><a type="button" class="" data-toggle="modal" data-target="#task">Browse questions</a></li>
+                          <!-- Modal -->
+                          <div id="task" class="modal fade table-modal" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title">Your questions</h4>
+                                </div>
+                                <!-- Modal INSERT-->
+                                <div class="text-right"> 
+                                    <button type="button" data-toggle="modal" data-target="#tci" class="btn btn-default btn-md">
+                                      <span class="glyphicon glyphicon-plus"></span> Insert 
+                                    </button>
+                                  </div>
+                                  <div id="tci" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+                                      <!-- Modal content-->
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h4 class="modal-title">Ask new question</h4>
+                                        </div>
+                                        <div class="modal-body">             
+                                          <form class="form-horizontal" method="POST" action="/task/store">
+                                          {!! csrf_field() !!}
+                                            <div class="form-group">
+                                              <label class="col-sm-2 control-label">Name</label>
+                                              <div class="col-sm-10">
+                                                  <input type="text" name="name" value="{{ old('name') }}">
+                                              </div>
+                                            </div>
+                                            <div class="form-group">
+                                              <label class="col-sm-2 control-label">Description</label>
+                                              <div class="col-sm-10">
+                                                  <input type="text" name="description" value="{{ old('description') }}">
+                                              </div>
+                                            </div>
+                                            <div>
+                                                <button type="submit">Ask</button>
+                                            </div>
+                                          </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>  
+                                  <!-- END MODAL INSERT -->
+                                <div class="modal-body">             
+                                  <table class="responsive-table">
+                                   <tbody>
+                                      <tr>
+                                         <th class="col-sm-3"><i class="icon_profile"></i>Name</th>
+                                         <th class="col-sm-3"><i class="icon_description"></i>Description</th>
+                                         <th class="col-sm-3"><i class="icon_calendar"></i>Created at</th>
+                                         <th class="col-sm-3"><i class="icon_calendar"></i>Updated at</th>
+                                         <th class="col-sm-1"><i class="icon_cogs"></i> Action</th>
+                                      </tr>
+                                      @foreach ($tasks as $task)
+                                      <tr>
+                                         <td>{{ $task->name }}</td>
+                                         <td>{{ $task->description }}</td>
+                                         <td>{{ $task->created_at->format('d/m/Y H:i') }}</td>
+                                         <td>{{ $task->updated_at->format('d/m/Y H:i') }}</td>
+                                         <td>
+                                          <div class="btn-group">
+                                            
+                                                
+                                              <!-- Modal UPDATE-->
+                                              <div class="text-right"> 
+                                                {!! Form::open(['method' => 'POST','route' => ['task.edit', $task->id] ], ['class' => 'form-horizontal']) !!} 
+                                                <button type="submit" data-toggle="modal" data-target="#tasku" class="btn btn-primary"><i class="icon_plus_alt2"></i></a>
+                                                  {!! Form::close() !!}
+                                                </div>
+                                                <div id="tasku" class="modal fade" role="dialog">
+                                                  <div class="modal-dialog">
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                      <div class="modal-header">
+                                                        <h4 class="modal-title">Update question</h4>
+                                                      </div>
+                                                      <div class="modal-body">   
+                                                           
+                                                           @if (isset ($t))     
+                                                      
+                                                        {!!  Form::open(['method' => 'PATCH','route' => ['task.update', $t->id] ], ['class' => 'form-horizontal']) !!}
+                                                      
+                                                          <div class="form-group">
+                                                            <label class="col-sm-2 control-label">Name</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" name="name" value="{{ $t->name }}">
+                                                            </div>
+                                                           
+                                                          </div>
+                                                          <div>
+                                                              <button type="submit">Update</button>
+                                                          </div>
+                                                       {!! Form::close() !!}
+                                                       @endif
+                                                      </div>
+                                                      <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>  
+                                                <!-- END MODAL UPDATE -->
+                                                <button type="submit" class="btn btn-success"><i class="icon_check_alt2"></i></a>
+                                              <!-- DELETE FUNCTION -->
+                                              {!! Form::open(['method' => 'DELETE','route' => ['task.destroy', $task->id] ]) !!}
+                                                <button type="submit" class="btn btn-danger"><i class="icon_close_alt2"></i></a>
+                                              {!! Form::close() !!}
+                                              
+                                          </div>
+                                          </td>
+                                      </tr>
+                                      @endforeach                             
+                                   </tbody>
+                                  </table>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div> 
+                          <!-- END TASK CATEGORY -->
                     </ul>
                 </li>
                 <li class="sub-menu">
@@ -521,9 +652,61 @@ UGLAVNOM NIJE OVO DOBRO !!-->
     <div class="profile-widget profile-widget-info">
       <div class="panel-body">
         <div class="col-lg-4 col-sm-4 profile-widget-name">
+          <h4>{{Auth::user()->name}}</h4>               
+          <div class="follow-ava">
+            {!! Html::image('img/administrator.png') !!}
+          </div>
+        </div>
+        <div class="col-lg-8 col-sm-8 follow-info">
+            <p>{{Auth::user()->email}}</p>
+            <h6>
+                <span><i class="icon_clock_alt"></i>{{Carbon\Carbon::now('Europe/Sarajevo')->format('H:i')}}</span>
+                <span><i class="icon_calendar"></i>{{Carbon\Carbon::now('Europe/Sarajevo')->format('d/m/Y')}}</span>
+                <span><i class="icon_pin_alt"></i><!--dodati geolocation -->NY</span>
+            </h6>
+        </div>
+        <div class="weather-category twt-category">
+          <ul>
+            <!-- example -->
+              <li class="active">
+                  <h4>50</h4>
+                  <i class="icon_close_alt2"></i> Pending Task
+              </li>
+          </ul>
+        </div>
+      </div>
+      <footer class="profile-widget-foot">
+        <div class="follow-task">
+          <span>
+             <!-- example -->
+          <a href="">
+            <i class="icon_mail_alt tooltips" data-original-title="My Mail"></i>
+            <span class="badge bg-important">4</span>
+          </a>
+          </span>
+        </div>
+      </footer>
+    </div>
+  </section>
+  <!--user profile info end-->
+  </div>
+</div>
+<!--overview end-->
+@stop
+@endif
+@if( Auth::user()->name == 'client')
+@section('oclient')
+<!--overview start-->
+<div class="row state-overview">
+  <div class="col-lg-4">
+  <!--user profile info start-->
+  <section class="panel">
+    <div class="profile-widget profile-widget-info">
+      <div class="panel-body">
+        <div class="col-lg-4 col-sm-4 profile-widget-name">
           <h4>ssssss</h4>               
           <div class="follow-ava">
-              <img src="img/Empty_Profile.jpg" alt="">
+              <img src="../public/img/administrator.png" alt="">
           </div>
           <h6>{{Auth::user()->name}}</h6>
         </div>

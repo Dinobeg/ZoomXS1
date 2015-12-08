@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\TaskCategory;
-use App\User;
+use App\Task;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class TaskCategoryController extends Controller
+class TaskController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,9 +24,9 @@ class TaskCategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(array $data)
+    public function create()
     {
-
+        //
     }
 
     /**
@@ -38,7 +37,7 @@ class TaskCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $a = new TaskCategory();
+        $a = new Task();
         $a->fill(\Input::all());
         $a->save();   
         return redirect()->back();
@@ -64,7 +63,7 @@ class TaskCategoryController extends Controller
      */
     public function edit($id)
     {
-        $task = TaskCategory::findOrFail($id);
+        $task = Task::findOrFail($id);
         return view('pages.dashboard')
             ->with('users', User::all())
             ->with('task_categories',TaskCategory::all())
@@ -80,7 +79,7 @@ class TaskCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $task = TaskCategory::findOrFail($id);
+        $task = Task::findOrFail($id);
 
         $input = $request->all();
 
@@ -97,7 +96,7 @@ class TaskCategoryController extends Controller
      */
     public function destroy($id)
     {
-        $task = TaskCategory::findOrFail($id);
+        $task = Task::findOrFail($id);
         $task->delete();
         return redirect()->back();
     }
