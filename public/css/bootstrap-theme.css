@@ -4852,6 +4852,8 @@ body.modal-open,
   left: 0;
   z-index: 1040;
 }
+.table-modal .modal-dialog {width:auto;max-width:800px;}
+.table-modal {padding-left:5%;padding-right:5%;} 
 .modal.fade .modal-dialog {
   -webkit-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);

@@ -18,9 +18,17 @@ Route::get('home', function(){
 	if(Auth::guest()){
 		return Redirect::to('login');
 	} else {
-		return view('pages.dashboard');
+		return view('pages.dashboard')
+            ->with('users', App\User::all())
+            ->with('task_categories',App\TaskCategory::all());
 	}
 });
+
+// model routes..
+
+Route::post('tc/store', 'TaskCategoryController@store');
+Route::patch('tc/{id}', array('uses' => 'TaskCategoryController@update', 'as' => 'route.update'));
+Route::delete('tc/{id}', array('uses' => 'TaskCategoryController@destroy', 'as' => 'route.destroy'));
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
