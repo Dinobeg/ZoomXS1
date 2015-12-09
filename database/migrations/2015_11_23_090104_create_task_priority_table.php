@@ -12,9 +12,9 @@ class CreateTaskPriorityTable extends Migration
      */
     public function up()
     {
-        Schema::create('task_priority', function (Blueprint $table) {
-            $table->increments('tp_id');
-            $table->string('tp_name');
+        Schema::create('task_priorities', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ class CreateTaskPriorityTable extends Migration
      */
     public function down()
     {
-        Schema::drop('task_priority');
+        Schema::drop('task_priorities');
     }
 }

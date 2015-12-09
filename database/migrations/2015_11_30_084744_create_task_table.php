@@ -12,29 +12,29 @@ class CreateTaskTable extends Migration
      */
     public function up()
     {
-        Schema::create('task', function (Blueprint $table) {
-            $table->increments('t_id');
-            $table->integer('ps_id')->unsigned();
-            $table->integer('con_id')->unsigned();
-            $table->integer('cl_id')->unsigned();
+        Schema::create('tasks', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('personal_solution')->unsigned();
+            $table->integer('contract')->unsigned();
+            $table->integer('client')->unsigned();
             $table->integer('task')->unsigned();
-            $table->integer('ts_id')->unsigned();
-            $table->integer('tp_id')->unsigned();
-            $table->integer('tc_id')->unsigned();
-            $table->string('t_name');
-            $table->string('t_description');
-            $table->string('t_type');
+            $table->integer('task_status')->unsigned();
+            $table->integer('task_priority')->unsigned();
+            $table->integer('task_category')->unsigned();
+            $table->string('name');
+            $table->string('description');
+            $table->string('type');
             $table->timestamps();
         });
         
-        Schema::table('task', function($table) {
-            $table->foreign('ps_id')->references('ps_id')->on('personal_solution');
-            $table->foreign('con_id')->references('con_id')->on('contract');
-            $table->foreign('cl_id')->references('cl_id')->on('client');
-            $table->foreign('task')->references('t_id')->on('task');
-            $table->foreign('ts_id')->references('ts_id')->on('task_status');
-            $table->foreign('tp_id')->references('tp_id')->on('task_priority');
-            $table->foreign('tc_id')->references('tc_id')->on('task_category');
+        Schema::table('tasks', function($table) {
+            $table->foreign('personal_solution')->references('id')->on('personal_solutions');
+            $table->foreign('contract')->references('id')->on('contracts');
+            $table->foreign('client')->references('id')->on('clients');
+            $table->foreign('task')->references('id')->on('tasks');
+            $table->foreign('task_status')->references('id')->on('task_statuses');
+            $table->foreign('task_priority')->references('id')->on('task_priorities');
+            $table->foreign('task_category')->references('id')->on('task_categories');
         });
     }
 
@@ -45,6 +45,6 @@ class CreateTaskTable extends Migration
      */
     public function down()
     {
-        Schema::drop('task');
+        Schema::drop('tasks');
     }
 }

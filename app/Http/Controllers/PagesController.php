@@ -20,11 +20,15 @@ class PagesController extends Controller
     }
     public function login()
     {
-        return view ('pages.login');
+        return view ('auth.login');
+    }
+    public function logout()
+    {
+        return view ('auth.logout');
     }
     public function dashboard()
     {
-        return view ('pages.dashboard');
+        return view ('pages.dashboard'); 
     }
 
    

@@ -43,6 +43,11 @@ table tr th { color: #007AFF;}
     background: #007AFF;
     color: #fff;
 }
+#loginbutton
+{
+    float: right;
+    margin-top: 10px;
+}
 
 #container {
     width: 100%;
